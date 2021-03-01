@@ -13,8 +13,8 @@ import com.google.android.play.core.review.testing.FakeReviewManager
 class InAppReviewFlow(private val context: Activity) {
     fun startInAppReviewFlow(rating: Float, threshold: Float) {
         if (rating > threshold) {
-//            val manager = ReviewManagerFactory.create(context)
-        val manager = FakeReviewManager(context)
+        val manager = ReviewManagerFactory.create(context)
+//        val manager = FakeReviewManager(context)
             val request = manager.requestReviewFlow()
             request.addOnCompleteListener {
                 if (it.isSuccessful) {

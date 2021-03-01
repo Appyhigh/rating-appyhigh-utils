@@ -33,7 +33,5 @@ class MainActivity : AppCompatActivity() {
         rateLater.setOnClickListener {
             Toast.makeText(this, "Thanks for the feedback", Toast.LENGTH_SHORT).show()
         }
-
-
     }
 }
