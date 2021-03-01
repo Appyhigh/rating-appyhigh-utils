@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">XYZ</string>
+    <string name="remind_later">Remind Later</string>
+    <string name="rate_us">Rate Us</string>
+    <string name="how_is_your_experience_using_our_app">How is your experience using our App?</string>
+    <string name="we_would_love_to_hear_from_you">We would love to hear from you!</string>
+</resources>
