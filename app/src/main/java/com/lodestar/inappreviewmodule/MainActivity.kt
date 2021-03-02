@@ -24,8 +24,8 @@ class MainActivity : AppCompatActivity() {
 
         inapp.changeBackgroundOfView(rateNow, resources.getColor(R.color.colorPrimary))
         inapp.changeTextOfView(ratingTitle, "Enjoying ${getString(R.string.app_name)}?")
-        inapp.changeTextOfView(ratingSubtitle1, "Enjoying ${getString(R.string.app_name)}? 111")
-        inapp.changeTextOfView(ratingSubtitle2, "Enjoying ${getString(R.string.app_name)}? 222")
+        inapp.changeTextOfView(ratingSubtitle1, "We would love to hear from you!")
+        inapp.changeTextOfView(ratingSubtitle2, "How is your experience using our App?")
 
         rateNow.setOnClickListener {
             inapp.startInAppReviewFlow(ratingValue.rating, 4.0f)
