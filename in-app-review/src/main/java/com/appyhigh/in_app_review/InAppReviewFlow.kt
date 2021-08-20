@@ -5,6 +5,7 @@ import android.content.Intent
 import android.net.Uri
 import android.util.Log
 import android.view.View
+import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import com.google.android.play.core.review.ReviewManagerFactory
@@ -12,7 +13,7 @@ import com.google.android.play.core.review.testing.FakeReviewManager
 
 class InAppReviewFlow(private val context: Activity) {
     fun startInAppReviewFlow(rating: Float, threshold: Float) {
-        if (rating > threshold) {
+        if (rating >= threshold) {
         val manager = ReviewManagerFactory.create(context)
 //        val manager = FakeReviewManager(context)
             val request = manager.requestReviewFlow()
@@ -57,5 +58,11 @@ class InAppReviewFlow(private val context: Activity) {
     }
     fun changeTextOfView(title: View, titleText: String) {
         (title as TextView).text = titleText
+    }
+    fun changeTextColorOfView(title: View, color: Int) {
+        (title as TextView).setTextColor(color)
+    }
+    fun changeTintOfArrow(view: View, color: Int) {
+        (view as ImageView).setColorFilter(color)
     }
 }

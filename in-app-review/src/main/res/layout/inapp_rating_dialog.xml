@@ -13,7 +13,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/parentContainer"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="240dp"
         android:background="@color/rating_bg">
 
         <TextView
@@ -42,32 +42,61 @@
             app:layout_constraintTop_toBottomOf="@+id/ratingTitleTv" />
 
         <TextView
-            android:id="@+id/ratingMessageTv2"
+            android:id="@+id/ratingDislike"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/ratingTitleTv"
-            android:paddingBottom="10dp"
-            android:text="@string/how_is_your_experience_using_our_app"
+            android:paddingTop="10dp"
+            android:text="@string/dislike"
             android:textColor="@color/rating_text_color"
+            android:layout_marginStart="24dp"
             android:textSize="12sp"
-            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/ratingMessageTv1" />
 
-        <me.zhanghai.android.materialratingbar.MaterialRatingBar
+        <ImageView
+            android:id="@+id/imgDown"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintTop_toBottomOf="@id/ratingMessageTv1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat = "@drawable/ic_down"/>
+
+        <com.appyhigh.in_app_review.EmojiRatingBar
             android:id="@+id/rating_bar"
-            style="@style/Widget.MaterialRatingBar.RatingBar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/ratingMessageTv1"
-            android:progressBackgroundTint="@color/rating_btn_bg"
             android:layout_margin="5dp"
+            android:minHeight="36dp"
+            android:maxHeight="36dp"
+            android:layout_below="@id/imgDown"
+            app:layout_constraintEnd_toStartOf="@id/imgUp"
+            app:layout_constraintStart_toEndOf="@id/imgDown"
+            app:layout_constraintTop_toBottomOf="@+id/imgDown" />
+
+        <TextView
+            android:id="@+id/ratingLike"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ratingTitleTv"
+            android:text="@string/like"
+            android:textColor="@color/rating_text_color"
+            android:layout_marginEnd="24dp"
+            android:textSize="12sp"
+            android:layout_marginTop="12dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/ratingMessageTv2"
-            app:mrb_fillBackgroundStars="true"
-            app:mrb_progressTint="@color/colorPrimary"
-            app:mrb_secondaryProgressTint="@color/colorPrimary"/>
+            app:layout_constraintTop_toBottomOf="@+id/rating_bar" />
+
+        <ImageView
+            android:id="@+id/imgUp"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginEnd="15dp"
+            app:layout_constraintTop_toBottomOf="@id/rating_bar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:srcCompat = "@drawable/ic_up"/>
 
 
         <TextView

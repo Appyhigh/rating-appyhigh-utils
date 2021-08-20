@@ -4,8 +4,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
 import android.widget.Toast
+import com.appyhigh.in_app_review.EmojiRatingBar
 import com.appyhigh.in_app_review.InAppReviewFlow
-import me.zhanghai.android.materialratingbar.MaterialRatingBar
 
 class MainActivity : AppCompatActivity() {
     lateinit var inapp: InAppReviewFlow
@@ -17,15 +17,13 @@ class MainActivity : AppCompatActivity() {
 
         val rateNow = findViewById<TextView>(R.id.rate_now)
         val rateLater = findViewById<TextView>(R.id.rate_later)
-        val ratingValue = findViewById<MaterialRatingBar>(R.id.rating_bar)
+        val ratingValue = findViewById<EmojiRatingBar>(R.id.rating_bar)
         val ratingTitle = findViewById<TextView>(R.id.ratingTitleTv)
         val ratingSubtitle1 = findViewById<TextView>(R.id.ratingMessageTv1)
-        val ratingSubtitle2 = findViewById<TextView>(R.id.ratingMessageTv2)
 
         inapp.changeBackgroundOfView(rateNow, resources.getColor(R.color.colorPrimary))
         inapp.changeTextOfView(ratingTitle, "Enjoying ${getString(R.string.app_name)}?")
-        inapp.changeTextOfView(ratingSubtitle1, "We would love to hear from you!")
-        inapp.changeTextOfView(ratingSubtitle2, "How is your experience using our App?")
+        inapp.changeTextOfView(ratingSubtitle1, "Rate us to share your feedback!")
 
         rateNow.setOnClickListener {
             inapp.startInAppReviewFlow(ratingValue.rating, 4.0f)
