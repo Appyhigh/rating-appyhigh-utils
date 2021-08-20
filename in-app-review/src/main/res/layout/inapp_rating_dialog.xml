@@ -4,9 +4,6 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_marginTop="24dp"
-    android:layout_marginStart="10dp"
-    android:layout_marginEnd="10dp"
     android:elevation="5dp"
     app:cardCornerRadius="4dp">
 
