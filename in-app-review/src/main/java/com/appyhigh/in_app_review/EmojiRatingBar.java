@@ -89,6 +89,11 @@ public class EmojiRatingBar extends androidx.appcompat.widget.AppCompatRatingBar
         if (icon_size > H-16) {
             icon_size = H-16;
         }
+
+        if(icon_size <= 0){
+            icon_size = 50;
+        }
+
         int emoji_y_pos = (H/2)-icon_size/2;
 
         int delta = ((H > W)?(H):(W))/(stars);

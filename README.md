@@ -12,7 +12,7 @@ allprojects {
 ```
 2. To import this library, Add the following line to your app level *build.gradle* file.
 ```groovy
-implementation 'com.github.Appyhigh:rating-appyhigh-utils:1.0.2'(#Recommended latest version)
+implementation 'com.github.Appyhigh:rating-appyhigh-utils:1.0.3'(#Recommended latest version)
 ```
 3. To add the rating dialog include the *inapp_rating_dialog.xml* file in your activity's xml
 ```groovy
